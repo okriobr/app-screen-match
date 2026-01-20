@@ -1,10 +1,12 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to Screen Match App\n");
+        int year;
 
         Scanner input = new Scanner(System.in);
         List<Integer> evaluation = new ArrayList<>();
@@ -12,14 +14,33 @@ public class Main {
         System.out.println("Enter your favorite movie: ");
         String name = input.nextLine();
 
-        System.out.println("Enter the year of the movie: ");
-        int year = input.nextInt();
+        while (true){
+            System.out.println("Enter the year of the movie: ");
+            try{
+                year = input.nextInt();
 
-        for (int i = 0; i < 3; i++) {
+                if (year > 0){
+                    System.out.println(String.format("Year: ", year));
+                    break;
+                } else {
+                    System.out.println("The year of the film cannot be less than zero!");
+                }
+            } catch (InputMismatchException e){
+                System.out.println("Please enter a valid number!");
+                input.nextLine();
+            }
+        }
+
+        while (true){
             System.out.println("What's your rating for the movie: ");
             int rate = input.nextInt();
 
-            evaluation.add(rate);
+            if (rate >= 0 && rate <= 5){
+                evaluation.add(rate);
+                break;
+            } else{
+                System.out.println("The score must be between 0 and 5!");
+            }
         }
 
         double mean = evaluation.stream()
