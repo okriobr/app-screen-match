@@ -1,3 +1,5 @@
+import br.com.alura.screenmatch.model.Movie;
+
 public class ScreenMatchApp {
     public static void main(String[] args) {
         Movie movie = new Movie("The GodFather", 1972, 177, true);
