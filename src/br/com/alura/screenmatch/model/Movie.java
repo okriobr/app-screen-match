@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.model;
+
 import java.util.ArrayList;
 import java.util.List;
 
