@@ -6,14 +6,14 @@ import java.util.List;
 public class Title {
     private String name;
     private int year;
-    private int duration;
+    private int durationMinutes;
     private boolean included;
     private List<Integer> ratings = new ArrayList<Integer>();
 
     public Title (String name, int year, int duration, boolean included){
         this.name = name;
         this.year = year;
-        this.duration = duration;
+        this.durationMinutes = duration;
         this.included = included;
     }
 
@@ -25,8 +25,8 @@ public class Title {
         return year;
     }
 
-    public int getDuration() {
-        return duration;
+    public int getDurationMinutes() {
+        return durationMinutes;
     }
 
     public void setName(String name) {
@@ -37,8 +37,8 @@ public class Title {
         this.year = year;
     }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
+    public void setDurationMinutes(int durationMinutes) {
+        this.durationMinutes = durationMinutes;
     }
 
     public void setIncluded(boolean included) {
@@ -52,7 +52,7 @@ public class Title {
     public void showTechnicSlip(){
         System.out.println("Nome: " + name);
         System.out.println("Ano: " + year);
-        System.out.println(String.format("Duração: %d minutos", getDuration()));
+        System.out.println(String.format("Duração: %d minutos", getDurationMinutes()));
         System.out.println("Incluído no plano: " + included);
     }
 
