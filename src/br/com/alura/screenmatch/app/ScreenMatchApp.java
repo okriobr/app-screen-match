@@ -2,6 +2,10 @@ package br.com.alura.screenmatch.app;
 
 import br.com.alura.screenmatch.model.Movie;
 import br.com.alura.screenmatch.model.Serie;
+import br.com.alura.screenmatch.model.Title;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ScreenMatchApp {
     public static void main(String[] args) {
@@ -30,5 +34,17 @@ public class ScreenMatchApp {
 
         serie.showTechnicSlip();
 
+//        ArrayList<Title> playlist = new ArrayList<>();
+//
+//        playlist.add(movie);
+//        playlist.add(serie);
+//
+//        System.out.println(playlist.size());
+
+        List<Movie> movies = new ArrayList<>();
+
+        movies.add(movie);
+
+        System.out.println("Nome: " + movies.get(0).getName());
     }
 }
