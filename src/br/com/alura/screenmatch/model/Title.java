@@ -17,6 +17,18 @@ public class Title {
         this.included = included;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -40,6 +52,8 @@ public class Title {
     public void showTechnicSlip(){
         System.out.println("Nome: " + name);
         System.out.println("Ano: " + year);
+        System.out.println(String.format("Duração: %d minutos", getDuration()));
+        System.out.println("Incluído no plano: " + included);
     }
 
     public double calculateMean(List <Integer> ratings){
