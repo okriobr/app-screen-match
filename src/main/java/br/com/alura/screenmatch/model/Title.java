@@ -5,7 +5,7 @@ import br.com.alura.screenmatch.interfaces.Classifiable;
 public abstract  class Title implements Classifiable, Comparable<Title> {
     private final String name;
     private final int year;
-    private int durationMinutes;
+    private int duration;
     private boolean included;
     private int sumRatings;
     private int totalRatings;
@@ -24,12 +24,12 @@ public abstract  class Title implements Classifiable, Comparable<Title> {
         return year;
     }
 
-    public int getDurationMinutes() {
-        return durationMinutes;
+    public int getDuration() {
+        return duration;
     }
 
-    public void setDurationMinutes(int durationMinutes) {
-        this.durationMinutes = durationMinutes;
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 
     public void setIncluded(boolean included) {

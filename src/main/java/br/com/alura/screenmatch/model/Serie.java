@@ -43,7 +43,7 @@ public class Serie extends Title {
     }
 
     @Override
-    public int getDurationMinutes() {
+    public int getDuration() {
         return season * episode * minutesEpisode;
     }
 

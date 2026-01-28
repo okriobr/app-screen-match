@@ -10,6 +10,6 @@ public class TimeCalculator {
     }
 
     public void add(Title title){
-        totalTime += title.getDurationMinutes();
+        totalTime += title.getDuration();
     }
 }
