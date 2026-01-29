@@ -10,6 +10,10 @@ public class Serie extends Title {
         super(name, year);
     }
 
+    public Serie (TitleOmdb titleOmdb){
+        super(titleOmdb);
+    }
+
     public int getSeason() {
         return season;
     }

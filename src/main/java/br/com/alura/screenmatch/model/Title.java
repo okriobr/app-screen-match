@@ -16,6 +16,12 @@ public abstract  class Title implements Classifiable, Comparable<Title> {
         this.year = year;
     }
 
+    public Title (TitleOmdb titleOmdb){
+        this.name = titleOmdb.title();
+        this.year = Integer.parseInt(titleOmdb.year().substring(0, 4));
+        this.duration = Integer.parseInt(titleOmdb.runtime().substring(0, 2));
+    }
+
     public String getName() {
         return name;
     }

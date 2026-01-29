@@ -7,6 +7,10 @@ public class Movie extends Title {
         super(name, year);
     }
 
+    public Movie (TitleOmdb titleOmdb){
+        super(titleOmdb);
+    }
+
     public String getDirector() {
         return director;
     }
