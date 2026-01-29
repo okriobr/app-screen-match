@@ -1,7 +1,6 @@
 package br.com.alura.screenmatch.service;
 
 import br.com.alura.screenmatch.model.Movie;
-import br.com.alura.screenmatch.model.Title;
 import br.com.alura.screenmatch.model.TitleOmdb;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
@@ -31,11 +30,20 @@ public class ApiClient {
 
         String json = response.body();
 
+        System.out.println(json);
+
         Gson gson = new GsonBuilder()
                 .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
                 .create();
 
         TitleOmdb titleOmdb = gson.fromJson(json, TitleOmdb.class);
-        System.out.println(titleOmdb);
+
+        try{
+            Movie movie = new Movie(titleOmdb);
+            System.out.println(movie);
+        }catch (Exception e){
+            System.out.println("Error: " + e.getMessage());
+        }
+
     }
 }
